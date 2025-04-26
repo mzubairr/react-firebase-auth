@@ -62,17 +62,17 @@ function Signup() {
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
+                    minHeight: '100vh',
                 }}
             >
-                <Grid container spacing={0} sx={{ p: 1 }}>
+                <Grid container spacing={0} sx={{ py: 1, position: 'relative' }}>
                     {msg && (
                         <Typography
-                            sx={{ color: 'red', width: '100%', textAlign: 'center', mb: 2, }}
+                            sx={{ color: 'red', width: '100%', textAlign: 'center', position: 'absolute', top: -20 }}
                         >
                             {msg}
                         </Typography>
                     )}
-
                     <Grid size={{ xs: 12, sm: 6 }}>
                         <Box
                             sx={{
@@ -85,7 +85,6 @@ function Signup() {
                             <img src={singup} alt="singup-img" width={300} />
                         </Box>
                     </Grid>
-
                     <Grid size={{ xs: 12, sm: 6 }}>
                         <Box
                             sx={{
@@ -108,7 +107,6 @@ function Signup() {
                             >
                                 Design School
                             </Typography>
-
                             <Box
                                 sx={{
                                     display: 'flex',
@@ -117,17 +115,17 @@ function Signup() {
                                     alignItems: 'center',
                                 }}
                             >
-                                <Button fullWidth sx={{ bgcolor: '#FFF', my: 2, boxShadow: 3 }}>
+                                <Button fullWidth sx={{ my: 1.5, boxShadow: 3 }}>
                                     <img src={googleImg} alt="Sign-in google" width={150} />
                                 </Button>
-                                <Button fullWidth sx={{ bgcolor: '#FFF', my: 1, boxShadow: 3 }}>
+                                <Button fullWidth sx={{ my: 1, boxShadow: 3 }}>
                                     <img src={facebook} alt="Sign-in facebook" width={150} />
                                 </Button>
 
-                                <Divider sx={{ my: 2, width: '100%' }}>OR</Divider>
+                                <Divider sx={{ width: '100%' }}>OR</Divider>
 
                                 <form style={{ width: '100%' }} onSubmit={submitHandler}>
-                                    <FormControl fullWidth variant="filled" sx={{ my: 2 }}>
+                                    <FormControl fullWidth variant="filled" sx={{ my: 1 }}>
                                         <InputLabel htmlFor="filled-adornment-email">Email</InputLabel>
                                         <FilledInput
                                             id="filled-adornment-email"
@@ -140,7 +138,6 @@ function Signup() {
                                             }
                                         />
                                     </FormControl>
-
                                     <FormControl fullWidth variant="filled">
                                         <InputLabel htmlFor="filled-adornment-password">
                                             Password
@@ -161,7 +158,6 @@ function Signup() {
                                             }
                                         />
                                     </FormControl>
-
                                     <Box
                                         display="flex"
                                         justifyContent="space-between"
